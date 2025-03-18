@@ -1,0 +1,37 @@
+<body>
+
+    <div class="todo-container">
+        <h2>My To-Do List</h2>
+        <ul class="todo-List">
+            <li>Buy groceries</li>
+            <li>Clean the house</li>
+        </ul>
+        <input type="text" class="todo-input" placeholder="New task.." />
+        <button class="add-btn">Add Task</button>
+    </div>
+
+    <script>
+        const addButton = document.querySelector('.add-btn'); // Corrected class
+        const inputField = document.querySelector('.todo-input');
+        const todoList = document.querySelector('.todo-List'); // Corrected class name
+
+        // Add new task when button is clicked
+        addButton.addEventListener('click', () => {
+            const newTask = inputField.value;
+            if (newTask) {
+                const newItem = document.createElement('li');
+                newItem.innerHTML = newTask;
+                todoList.appendChild(newItem);
+                inputField.value = ''; // Clear input field
+            }
+        });
+
+        // Remove task when clicked
+        todoList.addEventListener('click', (event) => { // Corrected variable name
+            if (event.target.tagName === 'LI') {
+                event.target.remove(); // Remove clicked item
+            }
+        });
+    </script>
+
+</body>

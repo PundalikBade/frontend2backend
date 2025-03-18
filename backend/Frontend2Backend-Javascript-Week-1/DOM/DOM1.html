@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Query Selector</title>
+</head>
+
+<body>
+
+    <nav class="block">
+        <p class="paragraph">Welcome to my website</p>
+    </nav>
+
+    <div>
+        <div>
+            <h3>hii tere</h3>
+        </div>
+    </div>
+    <div class="block">
+        <h4>hey there, my name is <span id="username"> piyush</span> </h4>
+        <p>Here is code for You </p>
+        <pre> <code> console.log('Hey There') </code> </pre>
+    </div>
+    <script>
+        // query selector
+
+        const nav = document.querySelector('nav');
+        nav.innerHTML = '<h3>This is My website</h3>';
+        const div = document.querySelector('div');
+        div.innerHTML = '<h1>hii</h1>';
+    </script>
+</body>
+
+</html>

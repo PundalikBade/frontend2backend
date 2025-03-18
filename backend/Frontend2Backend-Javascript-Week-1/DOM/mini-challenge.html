@@ -1,0 +1,22 @@
+<div class="container">
+    <h2 class="header">
+        Welcome to the Page
+    </h2>
+    <ul class="list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <button class="change-btn">Change Items</button>
+
+</div>
+
+<script>
+    const button = document.querySelector('.change-btn');
+    button.addEventListener('click', () => {
+        const items = document.querySelectorAll('.list li');
+        items.forEach(item => {
+            item.innerText = 'Updated Item';
+        })
+    })
+</script>
