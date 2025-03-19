@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Effect</title>
+    <style>
+        #myHeading {
+            transition: all 0.5s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2 id="myHeading">Original Heading</h2>
+
+    <button onclick="toggleHeading()">Toggle Style</button>
+
+    <script>
+        // Variable to track the state of styles
+        let isStyled = false;
+
+        function toggleHeading() {
+            const heading = document.getElementById('myHeading');
+
+            if (isStyled) {
+                // Reset styles and text
+                heading.innerText = 'Original Heading';
+                heading.style.color = '';
+                heading.style.fontSize = '';
+                heading.style.fontWeight = '';
+            } else {
+                // Apply styles and change text
+                heading.innerText = 'Heading Changed!';
+                heading.style.color = 'red';
+                heading.style.fontSize = '32px';
+                heading.style.fontWeight = 'bold';
+            }
+
+            // Toggle the state
+            isStyled = !isStyled;
+        }
+    </script>
+</body>
+
+</html>

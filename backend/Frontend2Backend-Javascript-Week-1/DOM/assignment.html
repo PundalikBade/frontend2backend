@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Manipulation Practice</title>
+</head>
+
+<body>
+
+    <h2 id="MyHeading">Original Heading</h2>
+    <button onclick="changeHeading()">Click to Change</button>
+
+    <script>
+        function changeHeading() {
+            const heading = document.getElementById("MyHeading");
+
+            // Change the text content
+            heading.innerText = 'Heading Changed!';
+
+            // Apply styles
+            heading.style.color = 'red';
+            heading.style.fontSize = '32px';
+            heading.style.fontWeight = 'bold';
+        }
+    </script>
+
+</body>
+
+</html>
+<!-- 
+✅ What's happening here: We have an
+<h2> with an ID of myHeading. There's a button that calls changeHeading() when clicked. The function: Changes the text. Changes the color to red. Increases the font size. Makes the text bold. -->

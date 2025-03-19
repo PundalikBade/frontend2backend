@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulating</title>
+</head>
+
+<body>
+    <div>
+        <h1 id="Heading">Hello!</h1>
+        <button onclick="changeText()">Change Text</button>
+
+    </div>
+
+    <script>
+        function changeText() {
+            const Upadate = document.getElementById(Heading);
+            Upadate.innerText = 'You clicked the button';
+            console.log("button is clicked")
+        }
+    </script>
+</body>
+
+</html>
